@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Caveat:wght@400;500;600;700&family=Clicker+Script&family=Exo:wght@100;200;300;400;500;600;700;800&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Kaushan+Script&family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@300;400;600;700;900&family=Srisakdi:wght@400;700&display=swap');
+
+
+
+:root{
+    --bbg:rgb(51, 51, 51);
+    --dbg:rgb(65, 65, 65);
+    --trans: all 0.4s ease;
+    --white-txt: #fff;
+    --menu-hover:#ffb3b3;
+    --background-shade: linear-gradient(to right, #3d0002, #a55353);
+    --dark-primary: #3d0002;
+    --logo-txt-color: goldenrod;
+    --banner-overlay: rgba(0, 0, 0, 0.781);
+    --shadow: 0px 0px 12px 1px #FFB3B3;
+    --shadow-white: 0px 0px 12px 1px #fff;
+}
+
+
+
+/* ========================= Common CSS Start ========================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    /* background-color: rgb(239, 231, 221); */
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+img{
+    vertical-align: middle;
+}
+
+ul,ol{
+    list-style-type: none;
+}
+
+
+/* ========================= Common CSS End ============================ */
+
+
+
+/* ========================= Main CSS Start ============================ */
+
+body{
+    background-color: var(--bbg);
+    color: var(--white-txt);
+}
+
+#aboutd{
+    padding-top: 5rem;
+}
+
+
+ #aboutd .heading h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    font-size: 28px;
+}
+
+
+ #aboutd .about-details{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 3rem;
+}
+
+/*  #aboutd .about-details .about-left{
+    width: 800px;
+    padding-top: 45px;
+} */
+
+ #aboutd .about-details .about-left p{
+    font-size: 15px;
+    font-weight: 500;
+    padding-top: 10px;
+    line-height: 24px;
+    padding-right: 67px;
+}
+
+ #aboutd .about-details .about-left .list-experience{
+    display: flex;
+    justify-content: space-between;
+}
+
+ #aboutd .about-details .about-left .list-experience .list .item {
+	display: flex;
+	/* margin-bottom: -10px; */
+}
+
+ #aboutd .about-details .about-left .list-experience .list .item .fa, .fab, .fad, .fal, .far, .fas {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 3;
+    margin-right: 8px;
+}
+
+ #aboutd .about-details .about-left .list-experience .list .item p{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+ #aboutd .about-details .about-left h2{
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+ #aboutd .about-details .about-left .list-experience .experience {
+	width: 146px;
+	height: 102px;
+	background: var(--background-shade);
+	text-align: center;
+	margin-top: 29px;
+	margin-left: 50px;
+	padding: 9px 15px;
+	border-top-left-radius: 18px;
+	border-top-right-radius: 18px;
+	border-bottom-left-radius: 18px;
+	border-bottom-right-radius: 18px;
+}
+
+ #aboutd .about-details .about-left .list-experience .experience h1{
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+ #aboutd .about-details .about-left .list-experience .experience h4{
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+ #aboutd .about-details .about-left .list-experience .experience h5{
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+ #aboutd .about-details .about-right{
+    width: 100%;
+    /* margin-left: 200px; */
+}
+
+ #aboutd .about-details .about-right .a-pic {
+	width: 100%;
+}
+
+ #aboutd .about-details .about-right .a-pic img{
+    width: 100%;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+ #aboutd .about-details .about-right .shape {
+	display: flex;
+    justify-content: space-between;
+	margin-top: 20px;
+	background: var(--background-shade);
+	border-radius: 0.5rem;
+	padding: 12px 19px;
+	-webkit-border-radius: 0.5rem;
+	-moz-border-radius: 0.5rem;
+	-ms-border-radius: 0.5rem;
+	-o-border-radius: 0.5rem;
+}
+
+#aboutd .about-details .about-right .item{
+    text-align: center;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* width: 80px; */
+}
+
+#aboutd .about-details .about-right .oned,.two,.three{
+    border-right: 1px solid #fff;
+}
+
+
+.tik_chihno{
+    margin-top: 0.9rem;
+    margin-right: 0.5rem;
+}
+
+
+
+ #aboutd .about-details .about-right .item h2{
+    font-weight: 700;
+    font-size: 16px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+}
+
+ #aboutd .about-details .about-right .item p{
+    font-weight: 500;
+    font-size: 14px;
+    padding-bottom: 8px;
+}
+
+ #aboutd .about-sort h2{
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+ #aboutd .about-sort .sort-item{
+    display: flex;
+    gap: 3rem;
+}
+
+ #aboutd .about-sort .sort-item .ml{
+    margin-left: 0;
+}
+
+ #aboutd .about-sort .sort-item .item1{
+    display: flex;
+    margin-left: 25px;
+}
+
+ #aboutd .about-sort .sort-item .item1 p {
+	padding-top: 13px;
+    font-style: 14px;
+    font-weight: 600;
+}
+
+ #aboutd .link-item .link {
+	display: flex;
+	margin-left: 25px;
+	margin-bottom: -18px;
+}
+
+ #aboutd .link-item .link p{
+    padding-top: 13px;
+    font-style: 14px;
+    font-weight: 500;
+}
+
+
+.point_icon{
+    margin-top: 1.1rem;
+    margin-right: 0.5rem;
+}
+
+
+/* ========================= Main CSS End ============================== */

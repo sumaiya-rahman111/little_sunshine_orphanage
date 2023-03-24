@@ -1,0 +1,48 @@
+#orphanage-list{
+  position: relative;
+  padding: 2rem 0;
+}
+
+#orphanage-list h1{
+  margin-top: 5rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.orphanage{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 4rem;
+  margin-top: 5rem;
+}
+
+.orph-title h3{
+  font-size: 2rem;
+}
+
+.orph-desc p{
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  line-height: 1.2rem;
+}
+
+.orph-footer{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.orph-address p{
+  font-size: 1rem;
+}
+
+.orph-image img{
+  width: 100%;
+}
+
+.orph-button{
+  text-align: right;
+}
+
+.orph-button button{
+  font-size: 1rem;
+}

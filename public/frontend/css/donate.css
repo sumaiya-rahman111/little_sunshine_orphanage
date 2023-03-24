@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Caveat:wght@400;500;600;700&family=Clicker+Script&family=Exo:wght@100;200;300;400;500;600;700;800&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Kaushan+Script&family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@300;400;600;700;900&family=Srisakdi:wght@400;700&display=swap');
+
+
+
+:root{
+    --bbg:rgb(51, 51, 51);
+    --dbg:rgb(65, 65, 65);
+    --trans: all 0.4s ease;
+    --white-txt: #fff;
+    --menu-hover:#ffb3b3;
+    --background-shade: linear-gradient(to right, #3d0002, #a55353);
+    --dark-primary: #3d0002;
+    --logo-txt-color: goldenrod;
+    --banner-overlay: rgba(0, 0, 0, 0.781);
+    --shadow: 0px 0px 12px 1px #FFB3B3;
+    --shadow-white: 0px 0px 12px 1px #fff;
+    --overlay: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+}
+
+
+
+/* ========================= Common CSS Start ========================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: none;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: var(--trans);
+    -webkit-transition: var(--trans);
+    -moz-transition: var(--trans);
+    -ms-transition: var(--trans);
+    -o-transition: var(--trans);
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    vertical-align: middle;
+}
+
+ul,ol{
+    list-style-type: none;
+}
+
+
+
+/* ========================= Common CSS End ============================ */
+
+
+
+
+/* ========================== Main CSS Start =========================== */
+
+body{
+    background-color: var(--bbg);
+    color: var(--white-txt);
+}
+
+#donatepage{
+    margin-top: 8em;
+}
+
+.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.donate-body form{
+    padding: 3rem 5rem;
+    background: var(--bbg);
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+    color: var(--white-txt);
+}
+
+.donate-body form .row .col .title{
+    text-align: center;
+    padding-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.donate-body form .row .col .input-box{
+    margin: 15px;
+
+}
+
+.donate-body form .row .col .input-box span{
+    margin-bottom: 10px;
+}
+
+.donate-body form .row .col .input-box input{
+    width: 100%;
+    border: var(--dbg);
+    padding: 10px 20px;
+    text-transform: none;
+    background-color: var(--dbg);
+    color: var(--white-txt);
+}
+
+.donate-body form .row .col .flex .input-box{
+    margin-top: 5px;
+}
+
+.donate-body form .row .col .input-box img{
+    height: 34px;
+    margin-top: 5px;
+}
+
+.donate-body form .submit-btn{
+    width: 100%;
+    padding: 12px;
+    background: var(--background-shade);
+    color: var(--white-txt);
+    margin-top: 3rem;
+    cursor: pointer;
+    transition: var(--trans);
+    -webkit-transition: var(--trans);
+    -moz-transition: var(--trans);
+    -ms-transition: var(--trans);
+    -o-transition: var(--trans);
+}
+
+.donate-body form .submit-btn:hover{
+    background: transparent;
+    border: 1px solid var(--menu-hover);
+}
+
+/* =========================== Main CSS End ============================ */

@@ -1,0 +1,1239 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Caveat:wght@400;500;600;700&family=Clicker+Script&family=Exo:wght@100;200;300;400;500;600;700;800&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Kaushan+Script&family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@300;400;600;700;900&family=Srisakdi:wght@400;700&display=swap');
+
+
+
+:root{
+    --bbg:rgb(51, 51, 51);
+    --dbg:rgb(65, 65, 65);
+    --trans: all 0.4s ease;
+    --white-txt: #fff;
+    --menu-hover:#ffb3b3;
+    --background-shade: linear-gradient(to right, #3d0002, #a55353);
+    --dark-primary: #3d0002;
+    --logo-txt-color: goldenrod;
+    --banner-overlay: rgba(0, 0, 0, 0.781);
+    --shadow: 0px 0px 12px 1px #FFB3B3;
+    --shadow-white: 0px 0px 12px 1px #fff;
+}
+
+
+
+
+
+
+
+/* ========================= Common CSS Start ========================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: var(--white-txt) !important;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    vertical-align: middle;
+}
+
+ul,ol{
+    list-style-type: none;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+body{
+    background: var(--bbg) !important;
+}
+
+.iconized{
+    color: var(--dark-primary) !important;
+}
+
+
+.buttn{
+    padding: 0.5rem 1.5rem;
+    background: var(--background-shade) !important;
+    color: var(--white-txt);
+    border: none;
+    transition: var(--trans);
+    -webkit-transition: var(--trans);
+    -moz-transition: var(--trans);
+    -ms-transition: var(--trans);
+    -o-transition: var(--trans);
+}
+
+
+.btn_rounded{
+    border-radius: 9rem !important;
+    -webkit-border-radius: 9rem !important;
+    -moz-border-radius: 9rem !important;
+    -ms-border-radius: 9rem !important;
+    -o-border-radius: 9rem !important;
+}
+
+.buttn:hover{
+    background: transparent !important;
+    border: 0.1rem solid var(--menu-hover) !important;
+    color: var(--menu-hover) !important;
+}
+
+/* ========================= Common CSS End ============================ */
+
+
+
+/* ========================= Navbar CSS Start ============================ */
+
+
+
+#nav{
+    background: #222826e0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+.header{
+    padding-top: 13px;
+    padding-bottom: 13px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.header-left {
+	display: flex;
+    justify-content: space-between;
+}
+
+.header-left .h-info{
+    display: flex;
+    margin-right: 20px;
+    color: var(--white-txt);
+    font-weight: 300;
+}
+
+.header-left .h-info i{
+    font-size: 22px;
+}
+
+.header-left .h-info p{
+    margin-left: 5px;;
+}
+
+.header-right{
+    display: flex;
+    justify-content: flex-end ;
+    color: var(--white-txt);
+}
+
+.header-right .icon-list{
+    display: flex;
+}
+
+.header-right .icon-list .item{
+    margin-right: 14px;
+}
+
+#border-top{
+    border-top: 1px solid var(--white-txt);
+}
+
+.menubar{
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 10rem;
+}
+.logo>img{
+    width: 40% !important;
+}
+
+
+
+
+.menubar .menu {
+	display: flex;
+	overflow: hidden;
+    justify-content:space-between;
+}
+
+.menubar .menu a{
+    padding-right: 25px;
+    padding-top: 10px;
+    text-transform: uppercase;
+    color: var(--white-txt);
+    font-size: 12px;
+    font-weight: 600;
+    position: relative;
+    font-weight: 400;
+}
+
+
+.navbar a{
+    transition: var(--trans);
+    -webkit-transition: var(--trans);
+    -moz-transition: var(--trans);
+    -ms-transition: var(--trans);
+    -o-transition: var(--trans);
+}
+
+.navbar a:hover{
+    color: var(--menu-hover) !important;
+}
+
+/* ========================= Navbar CSS End ============================== */
+
+
+
+
+/* ======================== Banner CSS Start ============================= */
+
+#banner{
+    position: relative;
+    background: url("../images/b2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 138px;
+    padding-bottom: 100px;
+}
+
+#banner::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--banner-overlay);
+}
+
+#banner .banner-txt{
+    position: relative;
+    z-index: 99;
+}
+
+#banner .banner-txt .heading{
+    padding-top: 80px;
+    padding-bottom: 15px;
+}
+
+#banner .banner-txt .heading p{
+    font-weight: 700;
+    color: var(--white-txt);
+    font-size: 50px;
+}
+
+#banner .banner-txt .paragraph p{
+    font-weight: 300;
+    color: var(--white-txt);
+    font-size: 17px;
+    padding-right: 230px;
+    line-height: 28px;
+    padding-bottom: 20px;
+}
+
+#banner .banner-txt .button{
+    display: flex;
+    margin-top: 50px;
+}
+
+#banner .banner-txt .button .item{
+    margin-right: 30px;
+}
+
+
+/* ========================= Banner CSS End ============================== */
+
+
+
+
+/* ========================= Involve CSS Start ============================ */
+
+#involve{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#involve p{
+    font-weight: 600;
+    font-size: 17px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--dark-primary);
+    padding-bottom: 15px;
+}
+
+#involve h2{
+    font-weight: 700;
+    font-size: 38px;
+    text-align: center;
+}
+
+#involve .involve-card{
+    display: flex;
+    margin-top: 50px;
+}
+
+#involve .involve-card .around-margin {
+	margin-left: 75px;
+	margin-right: 74px;
+}
+
+#involve .involve-card .item{
+    width: 100%;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: var(--shadow);
+    transition: var(--trans);
+    -webkit-transition: var(--trans);
+    -moz-transition: var(--trans);
+    -ms-transition: var(--trans);
+    -o-transition: var(--trans);
+}
+
+#involve .involve-card .item:hover{
+    box-shadow: var(--shadow-white);
+}
+
+/* #involve .involve-card .item .icon svg{
+    color: var(--dark-primary) !important;
+    font-size: 40px;
+} */
+
+#involve .involve-card .item .txt h3{
+    font-weight: 700;
+    font-size: 23px;
+    padding-top: 16px;
+}
+
+#involve .involve-card .item .txt p{
+    font-weight: 400;
+    font-size: 12px;
+    color: #000;
+    padding-top: 16px;
+    line-height: 20px;
+    padding-right: 12px;
+    padding-bottom: 35px;
+}
+
+.icon svg{
+    color: var(--dark-primary) !important;
+    font-size: 35px;
+}
+
+/* ========================= Involve CSS End ============================== */
+
+
+
+
+/* ======================== About CSS Start ============================= */
+
+#about{
+    padding-top: 40px;
+    padding-bottom: 110px;
+}
+
+#about .about-detail{
+    display: flex;
+}
+
+#about .about-detail .about-left{
+    width: 650px;
+    margin-right: 40px;
+    position: relative;
+}
+
+#about .about-detail .about-left .image img{
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+#about .about-detail .about-left .shape {
+	position: absolute;
+	top: 348px;
+	left: 66px;
+	width: 520px;
+	background: var(--background-shade);
+	border-top-left-radius: 18px;
+	border-top-right-radius: 18px;
+	border-bottom-left-radius: 18px;
+	border-bottom-right-radius: 18px;
+	padding: 12px 19px;
+	display: flex;
+}
+
+#about .about-detail .about-left .shape .item{
+    text-align: center;
+    width: 130px;
+}
+
+#about .about-detail .about-left .shape .two{
+    border-left: 1px solid var(--white-txt) !important;
+    border-right: 1px solid var(--white-txt);
+}
+
+#about .about-detail .about-left .shape .three{
+    border-right: 1px solid var(--white-txt);
+}
+
+#about .about-detail .about-left .shape .item h2{
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--white-txt);
+    padding-top: 20px;
+    padding-bottom: 6px;
+}
+
+#about .about-detail .about-left .shape .item p{
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--white-txt);
+    padding-bottom: 20px;
+}
+
+#about .about-detail .about-right{
+    width: 500px;
+}
+
+#about .about-detail .about-right .txt h3{
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--dark-primary);
+    text-transform: uppercase;
+}
+
+#about .about-detail .about-right .txt h2 {
+	font-weight: 700;
+	font-size: 36px;
+	padding-top: 10px;
+	padding-bottom: 18px;
+}
+
+#about .about-detail .about-right .txt p{
+    font-weight: 400;
+    font-size: 15px;
+    color: #000;
+    padding-right: 70px;
+    line-height: 24px;
+}
+
+#about .about-detail .about-right .txt .list-experience{
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 18px;
+}
+
+#about .about-detail .about-right .txt .list-experience .list{
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-left: 7px;
+}
+
+#about .about-detail .about-right .txt .list-experience .list .item{
+    padding-bottom: 4px;
+    display: flex;
+}
+
+#about .about-detail .about-right .txt .list-experience .list .item svg{
+    color: var(--dark-primary);
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+#about .about-detail .about-right .txt .list-experience .list .item p{
+    font-weight: 500;
+    font-size: 15px;
+}
+
+#about .about-detail .about-right .txt .list-experience .list .item .padding-bottom{
+    padding-bottom: 10px;
+}
+
+#about .about-detail .about-right .txt a{
+    background: var(--background-shade);
+    color: var(--white-txt);
+    font-weight: 700;
+    font-size: 16px;
+    padding: 13px 19px;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+#about .about-detail .about-right .txt a:hover{
+    background: var(--dark-primary);
+    color: var(--white-txt);
+}
+
+#about .about-detail .about-right .txt .list-experience .experience {
+	width: 153px;
+	height: 125px;
+	background: var(--background-shade);
+    text-align: center;
+    margin-top: 10px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+#about .about-detail .about-right .txt .list-experience .experience h1{
+    color: var(--white-txt);
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+#about .about-detail .about-right .txt .list-experience .experience h4{
+    color: var(--white-txt);
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+#about .about-detail .about-right .txt .list-experience .experience h5{
+    color: var(--white-txt);
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+/* ========================= About CSS End ============================== */
+
+
+
+
+/* ======================= Facilities CSS Start ============================== */
+
+#facilities{
+    padding-top: 40px;
+    padding-bottom: 150px;
+}
+
+#facilities .faci-heading{
+    text-align: center;
+}
+
+#facilities .faci-heading h3{
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--dark-primary);
+    text-transform: uppercase;
+} 
+
+#facilities .faci-heading h2{
+	font-weight: 700;
+	font-size: 40px;
+	padding-top: 10px;
+	padding-bottom: 22px;
+}
+
+#facilities .faci-card{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    
+}
+
+#facilities .faci-card .item{
+    width: 100%;
+    text-align: center;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow:hidden;
+}
+
+.faci-card .item img{
+    width: 100%;
+}
+
+#facilities .faci-card .item .shape {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: var(--background-shade);
+}
+
+#facilities .faci-card .item .shape p{
+    color: var(--white-txt);
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 1rem 0;
+}
+
+#facilities .faci-card .around-margin {
+	margin-left: 105px;
+	margin-right: 105px;
+}
+
+
+
+#facilities .faci-card .item .extra{
+    background: var(--background-shade);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#facilities .faci-card .item .extra p{
+    color: var(--white-txt);
+    font-weight: 600;
+    font-size: 20px;
+    transition:var(--trans);
+    -webkit-transition:var(--trans);
+    -moz-transition:var(--trans);
+    -ms-transition:var(--trans);
+    -o-transition:var(--trans);
+}
+
+#facilities .faci-card .item .extra p:hover{
+    font-size: 23px;
+    cursor: pointer;
+}
+
+/* ========================= Facilities CSS End ============================== */
+
+
+
+
+/* ========================= Event CSS Start ============================== */
+
+#event{
+    padding-bottom: 130px;
+}
+
+#event .event-heading{
+    text-align: center;
+}
+
+#event .event-heading h3{
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--dark-primary);
+    text-transform: uppercase;
+} 
+
+#event .event-heading h2{
+	font-weight: 700;
+	font-size: 39px;
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
+#event .event-card{
+    padding: 1rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+
+#event .event-card .item .ev{
+    position: relative;
+    
+    border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+    overflow: hidden;
+    border: 0.1rem solid #fff;
+}
+
+#event .event-card .item .ev img{
+    width: 100%;
+}
+
+#event .event-card .item .ev .overlay{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.587);
+}
+
+
+#event .event-card .item .event-detail{
+    position: relative;
+    padding-left: 30px;
+}
+
+#event .event-card .item .event-detail .date-box {
+	background: #2f5ac7;
+	padding: 1rem 0;
+	text-align: center;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	margin-top: 20px;
+	margin-left: 300px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    
+}
+
+#event .event-card .item .event-detail .date-box h3{
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--white-txt);
+}
+
+#event .event-card .item .event-detail .date-box h4{
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--white-txt);
+    text-transform: uppercase;
+}
+
+#event .event-card .item .event-detail .heading p{
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--white-txt);
+}
+
+#event .event-card .item .event-detail .time-loc{
+    display: flex;
+    justify-content: space-between;
+}
+
+#event .event-card .item .event-detail .time-loc .time p{
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--white-txt);
+}
+
+#event .event-card .item .event-detail .time-loc .time svg{
+    color: var(--dark-primary);
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+#event .event-card .item .event-detail .time-loc .location{
+    padding-right: 20px;
+}
+
+#event .event-card .item .event-detail .time-loc .location p{
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--white-txt);
+}
+
+#event .event-card .item .event-detail .time-loc .location svg{
+    color: var(--dark-primary);
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+
+#event .event-card .item .event-detail .details p{
+    font-weight: 300;
+    font-size: 16px;
+    color: var(--white-txt);
+    line-height: 30px;
+    padding-right: 20px;
+}
+
+
+#event .event-button{
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+
+
+
+
+
+/* ========================= Event CSS End ================================ */
+
+
+
+
+/* ========================= News CSS Start ================================ */
+
+#news{
+    padding-bottom: 180px;
+}
+
+#news .news-heading h4{
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--dark-primary);
+    text-transform: uppercase;
+}
+
+#news .news-heading .header-button{
+    display: flex;
+}
+
+#news .news-heading .header-button h2 {
+	font-weight: 700;
+	font-size: 39px;
+	padding-top: 10px;
+	padding-bottom: 30px;
+	padding-right: 474px;
+}
+
+#news .news-heading .header-button .button{
+    margin-top: 10px;
+}
+
+#news .news-heading .header-button .button a{
+    color: var(--white-txt);
+    font-weight: 600;
+    font-size: 18px;
+    background: var(--background-shade);
+    padding: 14px 21px;
+    border-top-left-radius: 27px;
+    border-top-right-radius: 27px;
+    border-bottom-left-radius: 27px;
+    border-bottom-right-radius: 27px;
+    transition: --var(--trans);
+    -webkit-transition: --var(--trans);
+    -moz-transition: --var(--trans);
+    -ms-transition: --var(--trans);
+    -o-transition: --var(--trans);
+}
+
+#news .news-heading .header-button .button a:hover{
+    background: var(--dark-primary);
+    color: var(--white-txt);
+}
+
+#news .news-content{
+    display: flex;
+    padding-top: 36px;
+}
+
+#news .news-content .news-left{
+    width: 580px;
+    margin-left: 10px;
+    margin-right: 40px;
+    display: flex;
+}
+
+#news .news-content .news-left .details{
+    width: 295px;
+    margin-right: 15px;
+}
+
+#news .news-content .news-left .details h3{
+	font-weight: 700;
+	font-size: 28px;
+	padding-bottom: 15px;
+}
+
+#news .news-content .news-left .details p{
+	font-weight: 400;
+	font-size: 16px;
+	padding-bottom: 20px;
+}
+
+#news .news-content .news-left .details .button {
+	padding-top: 14px;
+}
+
+#news .news-content .news-left .details .button a{
+    color: var(--white-txt);
+    font-weight: 600;
+    font-size: 17px;
+    background: var(--background-shade);
+    padding: 10px 23px;
+    border-top-left-radius: 27px;
+    border-top-right-radius: 27px;
+    border-bottom-left-radius: 27px;
+    border-bottom-right-radius: 27px;
+    transition: --var(--trans);
+    -webkit-transition: --var(--trans);
+    -moz-transition: --var(--trans);
+    -ms-transition: --var(--trans);
+    -o-transition: --var(--trans);
+}
+
+#news .news-content .news-left .details .button a:hover{
+    background: var(--dark-primary);
+    color: var(--white-txt);
+}
+
+#news .news-content .news-left .photo{
+    width: 270px;
+}
+
+#news .news-content .news-left .photo img{
+    width: 100%;
+}
+
+#news .news-content .news-right{
+    width: 580px;
+    display: flex;
+}
+
+#news .news-content .news-right .details{
+    width: 295px;
+    margin-right: 15px;
+}
+
+#news .news-content .news-right .details h3{
+	font-weight: 700;
+	font-size: 28px;
+	padding-bottom: 15px;
+}
+
+#news .news-content .news-right .details p{
+	font-weight: 400;
+	font-size: 16px;
+	padding-bottom: 20px;
+}
+
+#news .news-content .news-right .details .button {
+	padding-top: 14px;
+}
+
+#news .news-content .news-right .details .button a{
+    color: var(--white-txt);
+    font-weight: 600;
+    font-size: 17px;
+    background: var(--background-shade);
+    padding: 10px 23px;
+    border-top-left-radius: 27px;
+    border-top-right-radius: 27px;
+    border-bottom-left-radius: 27px;
+    border-bottom-right-radius: 27px;
+    transition: --var(--trans);
+    -webkit-transition: --var(--trans);
+    -moz-transition: --var(--trans);
+    -ms-transition: --var(--trans);
+    -o-transition: --var(--trans);
+}
+
+#news .news-content .news-right .details .button a:hover{
+    background: var(--dark-primary);
+    color: var(--white-txt);
+}
+
+#news .news-content .news-right .photo{
+    width: 270px;
+}
+
+#news .news-content .news-right .photo img{
+    width: 100%;
+}
+
+/* ========================= News CSS End ================================== */
+
+
+
+/* ======================== Adoption CSS Start ================================= */
+
+#adoption .adoption-background{
+    background-image: url("../images/Adoption.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    padding: 150px 0;
+    
+}
+
+#adoption .adoption-background::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(70, 70, 70, 0.753);
+}
+
+#adoption .adoption-details {
+	position: relative;
+	top: -260px;
+	left: 0;
+    text-align: center;
+}
+
+#adoption .adoption-details .adoption-header{
+    color: var(--white-txt);
+}
+
+#adoption .adoption-details .adoption-header h3{
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--white-txt);
+    padding-top: 20px;
+    text-transform: uppercase;
+}
+
+#adoption .adoption-details .adoption-header h2{
+	font-weight: 700;
+	font-size: 32px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#adoption .adoption-details .adoption-button{
+    padding-top: 10px;
+}
+
+#adoption .adoption-details .adoption-button a{
+    color: var(--white-txt);
+    font-weight: 600;
+    font-size: 19px;
+    background: var(--background-shade);
+    padding: 13px 30px;
+    border-top-left-radius: 27px;
+    border-top-right-radius: 27px;
+    border-bottom-left-radius: 27px;
+    border-bottom-right-radius: 27px;
+}
+
+#adoption .adoption-details .adoption-button a:hover{
+    background: var(--dark-primary);
+    color: var(--white-txt);
+}
+
+/* ========================= Adoption CSS End ================================== */
+
+
+
+
+/* ======================= Contribution CSS Start ================================== */
+
+#donate {
+	margin-bottom: 170px;
+	margin-top: -50px;
+    background: var(--dbg);
+    padding: 60px 0;
+}
+
+#donate .donate-details {
+	text-align: center;
+}
+
+#donate .donate-details .donate-header h3{
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--dark-primary);
+    text-transform: uppercase;
+}
+
+#donate .donate-details .donate-header h2{
+    color: #000;
+	font-weight: 700;
+	font-size: 30px;
+	padding-top: 12px;
+	padding-bottom: 25px;
+}
+
+#donate .donate-details .donate-button{
+    padding-top: 40px;
+}
+
+#donate .donate-details .donate-button a{
+    color: var(--white-txt);
+    font-weight: 600;
+    font-size: 17px;
+    background: var(--background-shade);
+    padding: 14px 30px;
+    border-top-left-radius: 27px;
+    border-top-right-radius: 27px;
+    border-bottom-left-radius: 27px;
+    border-bottom-right-radius: 27px;
+    transition: --var(--trans);
+    -webkit-transition: --var(--trans);
+    -moz-transition: --var(--trans);
+    -ms-transition: --var(--trans);
+    -o-transition: --var(--trans);
+}
+
+#donate .donate-details .donate-button a:hover{
+    background: var(--dark-primary);
+    color: var(--white-txt);
+}
+
+/* ========================= Contribution CSS End ================================== */
+
+
+
+
+/* ========================= Contact CSS Start ================================== */
+
+#contact{
+    margin-top: -40px;
+    padding-bottom: 40px;
+}
+
+#contact .contact-details {
+	text-align: center;
+}
+
+#contact .contact-details .contact-header h3{
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--dark-primary);
+    text-transform: uppercase;
+}
+
+#contact .contact-details .contact-header h2{
+	font-weight: 700;
+	font-size: 32px;
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
+#contact .contact-details .contact-card {
+	display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 4rem;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+#contact .contact-details .contact-card .item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    padding: 50px 50px;
+    transition: var(--trans);
+    -webkit-transition: var(--trans);
+    -moz-transition: var(--trans);
+    -ms-transition: var(--trans);
+    -o-transition: var(--trans);
+}
+
+#contact .contact-details .contact-card .item:hover{
+    box-shadow: var(--shadow-white);
+}
+
+
+
+#contact .contact-details .contact-card .item svg{
+    color: var(--dark-primary) !important;
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+
+#contact .contact-details .more-button{
+    margin-top: 100px;
+}
+
+
+
+/* ========================== Contact CSS End =================================== */
+
+
+
+
+/* ========================== Footer CSS Start =================================== */
+
+#footer {
+	margin-top:  20px;
+	background: var(--background-shade);
+	border-top-left-radius: 350px;
+	padding-top: 2em;
+	padding-bottom: 20px;
+}
+
+#footer .footer-shape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+#footer .footer-shape .item-details{
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer .footer-shape .item-details .item svg{
+    text-align: center;
+    color: var(--dark-primary);
+    font-size: 24px;
+}
+
+#footer .footer-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0em 0;
+}
+
+
+.footer-details p{
+    line-height: 0.4em;
+}
+
+.footer_combo{
+    display: flex;
+    gap: 0.5rem;
+}
+
+
+.footer_combo i{
+    margin-bottom: 1em;
+}
+
+#footer .footer-details h3 {
+	color: var(--white-txt);
+	font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+#footer .footer-copyright{
+    text-align: center;
+    padding-top: 0.8em;
+}
+
+#footer .footer-copyright h5 {
+	color: var(--white-txt);
+	font-weight: 500;
+	font-size: 12px;
+}
+
+#footer .footer-copyright h6{
+    color: var(--white-txt);
+	font-weight: 500;
+	font-size: 14px;
+}
+
+/* =========================== Footer CSS End ==================================== */
