@@ -10,6 +10,9 @@ use App\Http\Controllers\Frontend\SocialLogin;
 use App\Http\Controllers\Frontend\FrontendRqstController;
 use App\Http\Controllers\Frontend\SingleNewsController;
 use App\Http\Controllers\Frontend\AdoptionController;
+use App\Http\Controllers\Frontend\VolunteerController;
+use App\Http\Controllers\Frontend\PartnerController;
+use App\Http\Controllers\Frontend\SponsorController;
 
 
 
@@ -49,3 +52,17 @@ Route::get('/newsFeedbackdlt/{id}',[SingleNewsController::class,'newsFeedbackdlt
 Route::get('/showOrphan',[NavController::class,'showOrphan'])->name('showOrphan');
 // news section ends
 
+
+// volunteer section starts
+Route::get('/volunteerDetails/{id}',[VolunteerController::class,'show'])->name('volunteerDetails');
+// volunteer section ends
+
+
+// partner section starts
+Route::post('/storePartnerRequest',[PartnerController::class,'store'])->name('inspartner');
+// partner section ends
+
+
+// sponsor section starts
+Route::post('/storeSponsorrRequest',[SponsorController::class,'store'])->name('insponsor');
+// sponsor section ends

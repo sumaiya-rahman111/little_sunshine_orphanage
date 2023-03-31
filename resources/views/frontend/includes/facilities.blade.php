@@ -1,4 +1,6 @@
     <!-- ================== Facilities Section Start ===================== -->
+    @foreach($facData as $datas)
+        @if($datas)
     <section id="facilities">
         <div class="container">
             <div class="faci-heading">
@@ -7,6 +9,9 @@
             </div>
 
             <div class="faci-card">
+        @break
+        @endif
+    @endforeach
                     @foreach($facData as $data)
                     <div data-aos="flip-left" class="item">
                         <img src="{{ asset('frontend/images/facilities') }}/{{ $data->image }}" alt="health">
@@ -15,7 +20,8 @@
                         </div>
                     </div>
                     @endforeach
-
+    @foreach($facData as $datas)
+        @if($datas)
                     <div data-aos="flip-left" class="item">
                         <div class="extra">
                             <a href="{{ route('showFac') }}">
@@ -23,7 +29,10 @@
                             </a>
                         </div>
                     </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        @break
+        @endif
+    @endforeach
     <!-- ================== Facilities Section End ======================= -->

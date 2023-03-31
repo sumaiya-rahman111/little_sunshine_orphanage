@@ -95,48 +95,66 @@
                             
                         </li>
                         
-                        <li class="has-sub-menu"><a href="#"><i class="ti-layout"></i> <span>Table</span></a>
-                        <ul class="side-header-sub-menu">
-                                <li class="has-sub-menu"><a href="#"> <span>Internal Affairs</span></a>
-                                    <ul class="side-header-sub-menu">
-                                        @if(Auth::user()->role == 1 or Auth::user()->role == 2)
-                                        <li><a href="{{ Route('staffList') }}"><span>Staff List</span></a></li>
-                                        @endif
-                                        <li><a href="{{ Route('adoptedBabyList') }}"><span>Adopted Baby List</span></a></li>
-                                        <li><a href="{{ Route('signedUpList') }}"><span>Sign up List</span></a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="{{ Route('extAffair') }}"><span>External Affairs</span></a></li>
-                                <!-- <li><a href="{{ Route('healthHistory') }}"><span>Facilities</span></a></li> -->
-                                <!-- <li><a href="{{ Route('accounts') }}"><span>Accounts</span></a></li> -->
-                                <li><a href="{{ Route('feedback') }}"><span>Feedback</span></a></li>
-                                <li><a href="{{ route('basicTable') }}"><span>Latests</span></a></li>
+
+                        
+
+
+
+                        <li class="has-sub-menu"><a href="#"><i class="fa-solid fa-child"></i> <span>Adoption</span></a>
+                            <ul class="side-header-sub-menu">
+                                <li><a href="{{ route('adoptionRequest') }}"><span>Adoption Requests</span></a></li>
+                                <li><a href="{{ Route('adoptedBabyList') }}"><span>Adopted Baby List</span></a></li>
+                                <li><a href="#"><span>Adopters List</span></a></li>
+                                <li><a href="{{ route('makeAdoption') }}"><span>Make an Adoption</span></a></li>
                             </ul>
                         </li>
-                        <li class="has-sub-menu"><a href="#"><i class="fa fa-users"></i> <span>Manage</span></a>
+
+                        <li class="has-sub-menu"><a href="#"><i class="fa-solid fa-handshake mt-1"></i> <span>Contribution</span></a>
+                            <ul class="side-header-sub-menu">
+                                <li><a href="{{ route('addDonor') }}"><span>Add Contributor</span></a></li>
+                                <li><a href="#"><span>Manage Contributor</span></a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-sub-menu"><a href="#"><i class="zmdi zmdi-accounts"></i> <span>Staff</span></a>
                             <ul class="side-header-sub-menu">
                                 <li><a href="{{ route('addStaff') }}"><span>Add Staff</span></a></li>
-                                <li><a href="{{ route('makeAdoption') }}"><span>Make an Adoption</span></a></li>
-                                @if(Auth::user()->role == 1 or Auth::user()->role == 2)
-                                <li><a href="{{ route('adoptionRequest') }}"><span>Adoption Request</span></a></li>
-                                @endif
-                                <li><a href="{{ route('volunteerRequest') }}"><span>Volunteer Request</span></a></li>
-                                <li><a href="{{ route('approvedRequest') }}"><span>Approved Requests</span></a></li>
-                                <li><a href="{{ route('addDonor') }}"><span>Add Contributor</span></a></li>
+                                <li><a href="{{ Route('staffList') }}"><span>Manage Staff</span></a></li>
                             </ul>
                         </li>
-                        
 
-                        
-
-
-
-                        <li class="has-sub-menu"><a href="#"><i class="fa-solid fa-handshake mt-1"></i> <span>Support</span></a>
+                        <li class="has-sub-menu"><a href="#"><i class="fa fa-genderless"></i> <span>Volunteer</span></a>
                             <ul class="side-header-sub-menu">
-                                <li><a href="chat.html"><span>Chat</span></a></li>
-                                <li><a href="mail.html"><span>Mail</span></a></li>
-                                <li><a href="single-mail.html"><span>Single Mail</span></a></li>
-                                <li><a href="todo-list.html"><span>Todo List</span></a></li>
+                                <li><a href="{{ Route('backVolunteer') }}"><span>Add Volunteer</span></a></li>
+                                <li><a href="{{ route('volunteerRequest') }}"><span>Volunteer Requests</span></a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-sub-menu"><a href="#"><i class="fa fa-genderless"></i> <span>Partner</span></a>
+                            <ul class="side-header-sub-menu">
+                                <li><a href="{{ route('addpart') }}"><span>Add Partner</span></a></li>
+                                <li><a href="{{ route('partnerRequest') }}"><span>Partner Requests</span></a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-sub-menu"><a href="#"><i class="fa fa-genderless"></i> <span>Sponsor</span></a>
+                            <ul class="side-header-sub-menu">
+                                <li><a href="{{ route('backSponsor') }}"><span>Add Sponsor</span></a></li>
+                                <li><a href="{{ route('sponsorRequest') }}"><span>Sponsor Requests</span></a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-sub-menu"><a href="#"><i class="fa-solid fa-list"></i> <span>Sign Up</span></a>
+                            <ul class="side-header-sub-menu">
+                                <li><a href="{{ Route('signedUpList') }}"><span>Manage Sign Up</span></a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-sub-menu"><a href="#"><i class="ti-anchor"></i> <span>Insights</span></a>
+                            <ul class="side-header-sub-menu">
+                                <li><a href="{{ route('basicTable') }}"><span>Events</span></a></li>
+                                <li><a href="{{ route('basicTable') }}"><span>Facilities</span></a></li>
+                                <li><a href="{{ route('basicTable') }}"><span>News</span></a></li>
                             </ul>
                         </li>
 

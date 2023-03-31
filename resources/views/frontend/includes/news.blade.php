@@ -1,17 +1,20 @@
     <!-- ================== News Section Start ========================= -->
-
-    <section id="news">
-        <div class="container">
-            <div class="news-heading">
-                <h4>Insights And Update</h4>
-                <div class="header-button">
-                    <h2>Our Recent Blog And News</h2>
-                    <div class="button">
-                        <a href="{{ route('showIsts') }}" class="buttn btn_rounded">View All Blogs</a>
+    @foreach($newsData as $datas)
+        @if($datas)
+        <section id="news">
+            <div class="container">
+                <div class="news-heading">
+                    <h4>Insights And Update</h4>
+                    <div class="header-button">
+                        <h2>Our Recent Blog And News</h2>
+                        <div class="button">
+                            <a href="{{ route('showIsts') }}" class="buttn btn_rounded">View All Blogs</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-
+            @break
+        @endif
+    @endforeach
             <div class="news-content">
                 <?php $sl = 1; ?>
                 @foreach($newsData as $data)
@@ -33,7 +36,12 @@
                 <?php $sl++ ?>
 
                 @endforeach
+    @foreach($newsData as $datas)
+        @if($datas)
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        @break
+        @endif
+    @endforeach
     <!-- ==================== News Section End ========================= -->

@@ -16,6 +16,7 @@ use App\Models\Frontend\Involve;
 use App\Models\Frontend\News;
 use App\Models\Frontend\Facilities;
 use App\Models\Frontend\AdoptionRequestSubmit;
+use App\Models\Frontend\VolunteerRegistration;
 
 class Navz extends Controller
 {
@@ -85,11 +86,6 @@ class Navz extends Controller
     public function accounts(){
         return view('backend.includes.table.accounts_table');
     }
-
-
-    public function feedback(){
-        return view('backend.includes.table.feedback_table');
-    }
     // table menu section ends
 
     // manage menu starts
@@ -104,7 +100,8 @@ class Navz extends Controller
 
 
     public function volunteerRequest(){
-        return view('backend.includes.manage.volunteerRequest');
+        $datas = VolunteerRegistration::all();
+        return view('backend.includes.manage.volunteerRequest',compact('datas'));
     }
 
     public function approvedRequest(){

@@ -1,13 +1,17 @@
 
 
 <!-- ================== Event Section Start ======================= -->
-    <section id="event">
-        <div class="container">
-            <div class="event-heading">
-                <h2>Upcoming Event</h2>
-                <h3>Come to Our Event For More Info</h3>
-            </div>
-
+    @foreach($eveData as $datas)
+        @if($datas)
+        <section id="event">
+            <div class="container">
+                <div class="event-heading">
+                    <h2>Upcoming Event</h2>
+                    <h3>Come to Our Event For More Info</h3>
+                </div>
+            @break
+        @endif
+    @endforeach
             <div class="event-card">
                 @foreach($eveData as $data)
                 <div class="item">
@@ -54,11 +58,16 @@
                     
                 </div>
                 @endforeach
-            </div>
+        @foreach($eveData as $datas)
+            @if($datas)
+                </div>
 
-            <div class="event-button">
-                <a href="{{ route('showEve') }}" class="buttn btn_rounded">View All Events</a>
+                <div class="event-button">
+                    <a href="{{ route('showEve') }}" class="buttn btn_rounded">View All Events</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+            @break
+        @endif
+    @endforeach
     <!-- ================== Event Section End ========================= -->

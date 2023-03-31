@@ -14,10 +14,10 @@
         <div class="container">
             <div class="v-body">
                 <div class="heading">
-                    <h3>Partnership Registration Form</h3>
+                    <h3>Sponsor Registration Form</h3>
                 </div>
 
-                <form action="{{ route('inspartner') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('insponsor') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <h2>Name:</h2>
                     <div class="input-box">
@@ -28,6 +28,12 @@
                     <h2>Email:</h2>
                     <div class="input-box">
                         <input class="form-control" name="email" type="email" placeholder="Enter Email Here.." required>
+                    </div>
+
+
+                    <h2>NID:</h2>
+                    <div class="input-box">
+                        <input class="form-control" name="nid" type="text" placeholder="Enter NID number Here.." required>
                     </div>
 
 

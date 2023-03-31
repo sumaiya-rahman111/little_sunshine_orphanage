@@ -138,12 +138,9 @@ class InvolveClass extends Controller
     }
 
     public function volunteer(){
-        return view('frontend.pages.volunteer');
+        return view('frontend.pages.volunteer.volunteer');
     }
-
-    public function sponsor(){
-        return view('frontend.pages.volunteer');
-    }
+ 
 
     public function details($id){
         $datas = Involve::find($id);
