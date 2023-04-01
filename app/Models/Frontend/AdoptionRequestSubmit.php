@@ -14,6 +14,11 @@ class AdoptionRequestSubmit extends Model
         'adopterId',
         'adopterName',
         'adopterEmail',
+        'formNumber',
+        'spouseName',
+        'adopterAltMobile',
+        'adopterGender',
+        'image',
         'adopterMobile',
         'adopterBan',
         'adopterNid',
@@ -21,6 +26,5 @@ class AdoptionRequestSubmit extends Model
         'adopterPa',
         'adopterPeradd',
         'adopterReason',
-        'adoptinoStatus'
     ];
 }

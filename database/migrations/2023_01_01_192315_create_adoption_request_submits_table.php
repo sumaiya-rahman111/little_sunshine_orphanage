@@ -19,6 +19,11 @@ return new class extends Migration
             $table->string('orphanId');
             $table->string('adopterName');
             $table->string('adopterEmail');
+            $table->string('formNumber')->nullable();
+            $table->string('spouseName')->nullable();
+            $table->string('adopterAltMobile')->nullable();
+            $table->string('adopterGender')->nullable();
+            $table->string('image')->nullable();
             $table->string('adopterMobile');
             $table->string('adopterBan');
             $table->string('adopterNid');

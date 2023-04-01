@@ -154,8 +154,9 @@ Route::middleware('auth')->group(function(){
     
     // adoption section starts
     Route::get('/adoptedBabyList',[Navz::class,'adoptedBabyList'])->name('adoptedBabyList');
-    Route::post('/makeAdoption',[AdoptionController::class,'makeAdoption'])->name('makeAdoption');
+    Route::get('/makeAdoption',[AdoptionController::class,'makeAdoption'])->name('makeAdoption');
     Route::get('/adoptionRequest',[AdoptionController::class,'adoptionRequest'])->name('adoptionRequest');
+    Route::post('/makeBackAdoption',[AdoptionController::class,'storeback'])->name('makeBackAdoption');
     // adoption section ends
     
     

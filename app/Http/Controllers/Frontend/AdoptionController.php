@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Models\Backend\Orphan;
 use App\Models\Frontend\AdoptionRequestSubmit;
 use Illuminate\Support\Facades\Auth;
+use Image;
+use File;
+
 
 class AdoptionController extends Controller
 {
@@ -90,7 +93,10 @@ class AdoptionController extends Controller
 
 
     public function makeAdoption(){
-        return view('backend.includes.manage.makeAdoption');
+        $datas = Orphan::all();
+        $orphanData = AdoptionRequestSubmit::all();
+
+        return view('backend.includes.manage.makeAdoption',compact('datas','orphanData'));
     }
 
 
@@ -123,6 +129,59 @@ class AdoptionController extends Controller
         $orphanData = Orphan::find($id);
 
         return view('frontend.pages.adoption-status',compact('arsData','orphanData'));
+    }
+
+    public function storeback(Request $request){
+        $request->validate([
+            'orphanId' => ['string'],
+            'adopterName' => ['string'],
+            'adopterEmail' => ['string'],
+            'formNumber' => ['string'],
+            'spouseName' => ['string'],
+            'adopterAltMobile' => ['string'],
+            'adopterGender' => ['string'],
+            'image' => ['required'],
+            'adopterMobile' => ['string'],
+            'adopterBan' => ['string'],
+            'adopterNid' => ['string'],
+            'adopterDob' => ['date'],
+            'adopterPa' => ['string'],
+            'adopterPeradd' => ['string'],
+            'adopterReason' => ['string']
+        ]);
+
+        // image part starts
+        $adptrid = 0;
+
+
+        if($request->image){
+            $picture = $request->file('image');
+            $scustomName = rand().".".$picture->getClientOriginalExtension();
+            $location = public_path("backend/imageStore/adopter/".$scustomName);
+            Image::make($picture)->save($location);
+
+
+            AdoptionRequestSubmit::create([
+                'orphanId' => $request->orphanId,
+                'adopterId' => $adptrid,
+                'adopterName' => $request->adopterName,
+                'adopterEmail' => $request->adopterEmail,
+                'formNumber' => $request->formNumber,
+                'spouseName' => $request->spouseName,
+                'adopterAltMobile' => $request->adopterAltMobile,
+                'adopterGender' => $request->adopterGender,
+                'adopterMobile' => $request->adopterMobile,
+                'adopterBan' => $request->adopterBan,
+                'adopterNid' => $request->adopterNid,
+                'adopterDob' => $request->adopterDob,
+                'adopterPa' => $request->adopterPa,
+                'adopterPeradd' => $request->adopterPeradd,
+                'adopterReason' => $request->adopterReason,
+                'image' => $scustomName,
+            ]);
+
+            return back();
+        }
     }
 
 }

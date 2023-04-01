@@ -1,0 +1,17 @@
+<div class="form-group col-12">
+                                    <label for="orphan_id">Enter Orphan id:</label>
+                                    <select class="form-control info" name="orphanId" required>
+                                        <?php $count = 0; ?>
+                                        @foreach($datas as $data)
+                                            @foreach($orphanData as $odata)
+                                                @if($data->id == $odata->orphanId)
+                                                    <?php $count++; ?>
+                                                @endif
+                                            @endforeach
+                                            @if($count == 0)
+                                                <option class="form-control" value="{{ $data->id }}">{{ $data->id }}</option>
+                                            @endif
+                                            <?php $count = 0; ?>
+                                        @endforeach
+                                    </select>
+                                </div>
