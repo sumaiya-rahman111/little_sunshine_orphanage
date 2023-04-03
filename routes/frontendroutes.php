@@ -13,6 +13,7 @@ use App\Http\Controllers\Frontend\AdoptionController;
 use App\Http\Controllers\Frontend\VolunteerController;
 use App\Http\Controllers\Frontend\PartnerController;
 use App\Http\Controllers\Frontend\SponsorController;
+use App\Http\Controllers\Frontend\OrphanController;
 
 
 
@@ -21,6 +22,10 @@ Route::get('/',[Navz::class,'frontendshow'])->name('homepage');
 Route::get('/orphanDetails{id}',[Navz::class,'orphanDetails'])->name('orphanDetails');
 Route::get('/orphanages',[NavController::class,'orphanageShow'])->name('showOrphanage');
 Route::get('/orphanageDetails{id}',[Manage::class,'orphanageDetails'])->name('orphanageDetails');
+Route::get('/adoptionStatus/{orphanId}',[OrphanController::class,'index'])->name('adoptionStatus');
+
+
+
 Route::get('/about',[NavController::class,'showAbout'])->name('showAbout');
 Route::get('/facilities',[NavController::class,'showFac'])->name('showFac');
 Route::get('/events',[NavController::class,'showEve'])->name('showEve');

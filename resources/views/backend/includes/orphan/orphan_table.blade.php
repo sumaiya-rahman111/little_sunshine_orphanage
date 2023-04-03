@@ -29,7 +29,7 @@
                                                 </td>
                                                 <td>
                                                     <a href="{{ Route('editOrphan',$data->id) }}" class="button button-outline button-info"><span>
-                                                        <i class="fa-solid fa-pen-to-square"></i>
+                                                    <i class="fa-solid fa-pen-nib"></i>
                                                     </span></a>
                                                 </td>
                                                 <td>

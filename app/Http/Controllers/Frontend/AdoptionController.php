@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Backend\Orphan;
+use App\Models\Backend\AdopterList;
 use App\Models\Frontend\AdoptionRequestSubmit;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Image;
 use File;
@@ -55,6 +57,16 @@ class AdoptionController extends Controller
 
     }
 
+
+
+    public function adoptedBabyDetails($id){
+        $orphanData = Orphan::all();
+        $datas = AdoptionRequestSubmit::find($id);
+        return view('backend.includes.adoption.adoptedBabyListDetails',compact('datas','orphanData'));
+    }
+
+
+
     public function insert(Request $request){
         $userId = Auth::user()->id;
         $request->validate([
@@ -99,6 +111,25 @@ class AdoptionController extends Controller
         return view('backend.includes.manage.makeAdoption',compact('datas','orphanData'));
     }
 
+    
+
+    public function detailsPage($id){
+        $datas = AdoptionRequestSubmit::find($id);
+        $userData = User::all();
+
+        return view('backend.includes.adoption.adoptionRequestDetails',compact('datas','userData'));
+    }
+
+
+    public function approve($id){
+        $datas = AdoptionRequestSubmit::find($id);
+
+        $datas->adoptionStatus = "Approved";
+
+        $datas->update();
+
+        return back();
+    }
 
 
     public function show(){
@@ -182,6 +213,43 @@ class AdoptionController extends Controller
 
             return back();
         }
+    }
+
+    public function destroy($id){
+        $data = AdoptionRequestSubmit::find($id);
+
+        $data->delete();
+
+        return back();
+    }
+
+    public function adopterList(){
+        $ars = AdoptionRequestSubmit::all();
+        $arr = array();
+        foreach($ars as $rqs){
+            array_push($arr,$rqs->adopterId);
+        }
+
+        $unq = array_unique($arr);
+
+        $datas = array();
+
+        foreach($unq as $un){
+            $dt = AdoptionRequestSubmit::where('adopterId',$un)->get()->first();
+            array_push($datas,$dt);
+        }
+
+        $manualAdopterId = 0;
+
+        $xero = AdoptionRequestSubmit::where('adopterId',$manualAdopterId)->get();
+
+        return view('backend.includes.adoption.adopterList',compact('datas','xero'));
+    }
+
+    public function adopterListDetails($id){
+        $datas = AdoptionRequestSubmit::find($id);
+        $userData = User::all();
+        return view('backend.includes.adoption.adopterListDetails',compact('datas','userData'));
     }
 
 }

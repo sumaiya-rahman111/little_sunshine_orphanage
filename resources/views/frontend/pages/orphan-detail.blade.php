@@ -165,6 +165,13 @@
           @if($datas == null)
               <a href="{{ route('adoptSpecific',$osng->id) }}" class="buttn btn_rounded mt-3">Adopt this Child</a>
           @endif
+          
+          @if($datas)
+          @if($datas->adopterId == Auth::user()->id)
+              <a href="{{ route('adoptionStatus',$datas->orphanId) }}" class="buttn btn_rounded mt-3">Adoption Request Status</a>
+          @endif
+          @endif
+
         </div>
       </div>
     </div>

@@ -37,7 +37,7 @@
                 <!-- orphan orphanages adoption -->
                 
                 @if(Auth::user())
-                    @if(Auth::user()->role == 1 or Auth::user()->role == 2 or Auth::user()->role == 3)
+                    @if(Auth::user()->role == 1 or Auth::user()->role == 2 or Auth::user()->role == 3 or Auth::user()->role == 4 or Auth::user()->role == 5 or Auth::user()->role == 6)
                         <li class="nav-item">
                             <a class="nav-link active text-light" aria-current="page" href="{{ Route('dashboard') }}">Admin Panel</a>
                         </li>

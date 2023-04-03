@@ -55,7 +55,7 @@
                                         
                                         <div class="form-group col-lg-6 col-md-6 mt-4">
                                             <label for="adopterEmail">Adopter Email:</label>
-                                            <input name="adopterEmail" type="text" class="form-control dark" placeholder="Adopter Email...">
+                                            <input name="adopterEmail" type="text" class="form-control info" placeholder="Adopter Email...">
                                         </div>
                                         
                                         <div class="form-group col-lg-6 col-md-6 mt-4">

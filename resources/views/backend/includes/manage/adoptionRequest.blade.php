@@ -26,20 +26,22 @@
                                 <td>{{ $data->adopterNid }}</td>
                                 <td>{{ $data->adopterReason }}</td>
                                 <td>
-                                    <a href="#" class="button button-outline button-primary"><span>
+                                    <a href="{{ Route('adoptionRequestDetails',$data->id) }}" class="button button-outline button-primary"><span>
                                         <i class="fa-solid fa-ellipsis"></i>
                                     </span></a>
                                 </td>
+                                @if($data->adoptionStatus == "Processing")
                                 <td>
-                                    <a href="#" class="sweetalert sweetalert-success button button-success button-outline"><span>
+                                    <a href="{{ Route('adoptionApprove',$data->id) }}" class="sweetalert sweetalert-success button button-success button-outline"><span>
                                         <i class="fa-solid fa-check"></i>
                                     </span></a>
                                 </td>
                                 <td>
-                                    <a href="#" class="sweetalert sweetalert-success button button-outline button-danger"><span>
+                                    <a href="{{ Route('deleteAdoptionRequest',$data->id) }}" class="sweetalert sweetalert-success button button-outline button-danger"><span>
                                         <i class="fa-solid fa-xmark"></i>
                                     </span></a>
                                 </td>
+                                @endif
                             </tr>
                         @endforeach
                     </tbody>

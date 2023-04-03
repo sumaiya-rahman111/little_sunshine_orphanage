@@ -5,7 +5,7 @@
     <div class="container-fluid">
 
         <div class="footer-copyright text-center">
-            <p class="text-body-light">2022 &copy; <a href="https://themeforest.net/user/codecarnival">Codecarnival</a></p>
+            <p class="text-body-light">All Rights Researved to &copy; <a href="https://www.github.com/aynaabaji" target="_blank">'The Glitch'</a></p>
         </div>
 
     </div>

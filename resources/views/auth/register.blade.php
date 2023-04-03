@@ -51,13 +51,14 @@
             <select name="role" class="form-control fc-outline-dark my-2">
               <option value="0" selected>User</option>
               <option value="10">Orphan</option>
-              <option value="3">Grade 1 staff</option>
+              <option value="101">Staff Account Request</option>
+              <!-- <option value="3">Grade 1 staff</option> -->
                   <!-- management -->
-              <option value="4">Grade 2 staff</option>
+              <!-- <option value="4">Grade 2 staff</option> -->
               <!-- grade 2 teacher,mentor,doctor -->
-              <option value="5">Grade 3 staff</option>
+              <!-- <option value="5">Grade 3 staff</option> -->
               <!-- grade 3 accounts -->
-              <option value="6">Grade 4 staff</option>
+              <!-- <option value="6">Grade 4 staff</option> -->
               <!-- grade 4 cleaner -->
               <option value="7">Volunteer</option>
               <option value="8">Adopter</option>

@@ -154,9 +154,15 @@ Route::middleware('auth')->group(function(){
     
     // adoption section starts
     Route::get('/adoptedBabyList',[Navz::class,'adoptedBabyList'])->name('adoptedBabyList');
+    Route::get('/adoptedBabyDetails/{id}',[AdoptionController::class,'adoptedBabyDetails'])->name('adoptedBabyDetails');
     Route::get('/makeAdoption',[AdoptionController::class,'makeAdoption'])->name('makeAdoption');
     Route::get('/adoptionRequest',[AdoptionController::class,'adoptionRequest'])->name('adoptionRequest');
     Route::post('/makeBackAdoption',[AdoptionController::class,'storeback'])->name('makeBackAdoption');
+    Route::get('/adoptionRequestDetails/{id}',[AdoptionController::class,'detailsPage'])->name('adoptionRequestDetails');
+    Route::get('/adoptionApprove/{id}',[AdoptionController::class,'approve'])->name('adoptionApprove');
+    Route::get('/deleteAdoptionRequest/{id}',[AdoptionController::class,'destroy'])->name('deleteAdoptionRequest');
+    Route::get('/adopterList',[AdoptionController::class,'adopterList'])->name('adopterList');
+    Route::get('/adopterListDetails/{id}',[AdoptionController::class,'adopterListDetails'])->name('adopterListDetails');
     // adoption section ends
     
     
@@ -196,6 +202,10 @@ Route::middleware('auth')->group(function(){
     
     // signup section starts
     Route::get('/signedUpList',[SignedUp::class,'index'])->name('signedUpList');
+    Route::get('/showUserDetails/{id}',[SignedUp::class,'show'])->name('showUserDetails');
+    Route::get('/deleteSignUp/{id}',[SignedUp::class,'destroy'])->name('deleteSignUp');
+    Route::get('/editAccountRole/{id}',[SignedUp::class,'edit'])->name('editAccountRole');
+    Route::post('/updateToStaffAccount/{id}',[SignedUp::class,'update'])->name('updateToStaffAccount');
     // signup section ends
     
     

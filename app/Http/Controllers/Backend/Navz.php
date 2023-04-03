@@ -70,7 +70,9 @@ class Navz extends Controller
     }
 
     public function adoptedBabyList(){
-        return view('backend.includes.table.adopted_table');
+        $orphanData = Orphan::all();
+        $datas = AdoptionRequestSubmit::where('adoptionStatus',"Approved")->get();
+        return view('backend.includes.adoption.adopted_table',compact('datas','orphanData'));
     }
 
     public function extAffair(){

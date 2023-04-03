@@ -1,22 +1,29 @@
 <?php
 
-namespace App\Http\Controllers\Backend;
+namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\User;
 
-class SignedUp extends Controller
+use App\Models\Frontend\AdoptionRequestSubmit;
+use App\Models\Backend\Orphan;
+
+class OrphanController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($orphanId)
     {
-        $signedUp = User::all();
-        return view('backend.includes.signup.signedup_table',compact('signedUp'));
+        
+        $arsData = AdoptionRequestSubmit::where('orphanId',$orphanId)->get()->last();
+        $orphanData = Orphan::find($orphanId);
+
+        // dd($arsData);
+
+        return view('frontend.pages.adoption-status',compact('arsData','orphanData'));
     }
 
     /**
@@ -48,8 +55,7 @@ class SignedUp extends Controller
      */
     public function show($id)
     {
-        $datas = User::find($id);
-        return view('backend.includes.signup.signupDetails',compact('datas'));
+        //
     }
 
     /**
@@ -60,9 +66,7 @@ class SignedUp extends Controller
      */
     public function edit($id)
     {
-        $datas = User::find($id);
-
-        return view('backend.includes.signup.updateAccountRole',compact('datas'));
+        //
     }
 
     /**
@@ -74,12 +78,7 @@ class SignedUp extends Controller
      */
     public function update(Request $request, $id)
     {
-        $datas = User::find($id);
-        $datas->role = $request->role;
-
-        $datas->update();
-
-        return redirect()->route('signedUpList');
+        //
     }
 
     /**
@@ -90,10 +89,6 @@ class SignedUp extends Controller
      */
     public function destroy($id)
     {
-        $datas = User::find($id);
-
-        $datas->delete();
-
-        return back();
+        //
     }
 }
